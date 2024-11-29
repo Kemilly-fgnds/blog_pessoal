@@ -7,7 +7,7 @@ import org.springframework.data.repository.query.Param;
 
 import com.generation.blogpessoal.model.Postagens;
 
-public interface PostagemRepository extends JpaRepository<Postagens, Long> {
+public interface PostagemRepository extends JpaRepository<Postagens, Long> { //Jpa é responsável por ter os métodos que virarão o SQL no MySQL
 
 	public List<Postagens> findAllByTituloContainingIgnoreCase(@Param("titulo") String titulo);
 
